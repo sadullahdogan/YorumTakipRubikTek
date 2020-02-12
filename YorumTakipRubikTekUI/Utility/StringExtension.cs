@@ -13,7 +13,12 @@ namespace YorumTakipRubikTekUI.Utility
         {
             foreach (var item in kelimelist)
             {
-                text = Regex.Replace(text, item.Kelime, "*", RegexOptions.IgnoreCase);
+                string replacement = string.Empty;
+                for (int i = 0; i < item.Kelime.Length; i++)
+                {
+                    replacement += '*';
+                }
+                text = Regex.Replace(text, item.Kelime, replacement, RegexOptions.IgnoreCase);
 
             }
             return text;

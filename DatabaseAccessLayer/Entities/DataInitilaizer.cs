@@ -11,7 +11,7 @@ namespace DatabaseAccessLayer.Entities
     {
         protected override void Seed(DatabaseContext context)
         {
-            Yorum first = new Yorum() { Baslik = "İlk Yorum", Tarih = DateTime.Now, İcerik = "İlk yorum başarı ile oluşturuldu" };
+            Yorum first = new Yorum() { Baslik = "İlk Yorum", Tarih = DateTime.Now, İcerik = "İlk yorum başarı ile oluşturuldu" ,Kullanici="user.user"};
             YasakliKelime ilkKelime = new YasakliKelime() { Kelime = "yasak" };
             context.Yorumlar.Add(first);
             context.YasakliKelimeler.Add(ilkKelime);

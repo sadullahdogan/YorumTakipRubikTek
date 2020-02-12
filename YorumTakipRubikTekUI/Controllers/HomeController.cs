@@ -16,10 +16,11 @@ namespace YorumTakipRubikTekUI.Controllers
         [Authorize]
         public ActionResult Index()
         {
-            
+
             return View(db.Yorumlar.ToList());
         }
-        public ActionResult YorumEkle() {
+        public ActionResult YorumEkle()
+        {
             return View();
         }
         [HttpPost]
@@ -28,8 +29,9 @@ namespace YorumTakipRubikTekUI.Controllers
             if (ModelState.IsValid)
             {
                 var kelimeList = db.YasakliKelimeler.ToList();
-               yorum.İcerik= yorum.İcerik.YasakKontrol(kelimeList);
-               
+                yorum.Baslik = yorum.Baslik.YasakKontrol(kelimeList);
+                yorum.İcerik = yorum.İcerik.YasakKontrol(kelimeList);
+
                 yorum.Kullanici = User.Identity.Name;
                 yorum.Tarih = DateTime.Now;
                 db.Yorumlar.Add(yorum);
