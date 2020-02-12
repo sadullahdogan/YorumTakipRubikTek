@@ -1,0 +1,12 @@
+﻿@model YorumTakipRubikTekUI.Models.LoginModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<div class="container">
+    <h2>Hesap Başarıyla Oluşturuldu</h2>
+    <label>Kullanıcı Adınız</label> <span>@Model.Username</span>
+    <label>Şifreniz</label> <span>@Model.Password</span>
+    @Html.ActionLink("Giriş Yap","GirisYap","User")
+</div>

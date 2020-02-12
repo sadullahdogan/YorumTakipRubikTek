@@ -1,0 +1,76 @@
+﻿@model IEnumerable<DatabaseAccessLayer.Entities.Yorum>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="container">
+    <div class="form-group container" style="margin-top:20px;">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+            <input type="text" id="Search" placeholder="Arama Yap (İçerik)" class="form-control" />
+        </div>
+    </div>
+    <h2>Yorumlar</h2>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Baslik)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.İcerik)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tarih)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kullanici)
+            </th>
+           
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr class="Search">
+                <td>
+                    @Html.DisplayFor(modelItem => item.Baslik)
+                </td>
+                <td class="icerik">
+                    @Html.DisplayFor(modelItem => item.İcerik)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tarih)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Kullanici)
+                </td>
+               
+            </tr>
+        }
+
+    </table>
+    <p>
+        @Html.Action("YorumEkle")
+    </p>
+</div>
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        function Ara(value, searchValue) {
+            if (value.indexOf(searchValue) != -1)
+                return true;
+        }
+        $("#Search").keyup(function () {
+            var aranacakYazi = $("#Search").val().toLowerCase();
+            $(".Search").each(function () {
+                if (!Ara($(this).children(".icerik").text().toLowerCase(), aranacakYazi)) {
+                    $(this).hide();
+                }
+                else {
+                    $(this).show();
+                }
+            });
+        });
+    });
+</script>

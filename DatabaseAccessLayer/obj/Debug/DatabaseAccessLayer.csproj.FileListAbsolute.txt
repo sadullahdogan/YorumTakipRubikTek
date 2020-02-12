@@ -1,0 +1,11 @@
+C:\Users\sadul\source\repos\YorumTakipRubikTek\DatabaseAccessLayer\bin\Debug\DatabaseAccessLayer.dll.config
+C:\Users\sadul\source\repos\YorumTakipRubikTek\DatabaseAccessLayer\bin\Debug\DatabaseAccessLayer.dll
+C:\Users\sadul\source\repos\YorumTakipRubikTek\DatabaseAccessLayer\bin\Debug\DatabaseAccessLayer.pdb
+C:\Users\sadul\source\repos\YorumTakipRubikTek\DatabaseAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\sadul\source\repos\YorumTakipRubikTek\DatabaseAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sadul\source\repos\YorumTakipRubikTek\DatabaseAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\sadul\source\repos\YorumTakipRubikTek\DatabaseAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sadul\source\repos\YorumTakipRubikTek\DatabaseAccessLayer\obj\Debug\DatabaseAccessLayer.csprojAssemblyReference.cache
+C:\Users\sadul\source\repos\YorumTakipRubikTek\DatabaseAccessLayer\obj\Debug\DatabaseAccessLayer.csproj.CopyComplete
+C:\Users\sadul\source\repos\YorumTakipRubikTek\DatabaseAccessLayer\obj\Debug\DatabaseAccessLayer.dll
+C:\Users\sadul\source\repos\YorumTakipRubikTek\DatabaseAccessLayer\obj\Debug\DatabaseAccessLayer.pdb
